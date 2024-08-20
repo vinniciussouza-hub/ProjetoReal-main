@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { principalComponent } from './principal/principal.component';
+import { mapaComponent } from './mapa/mapa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    principalComponent
+    principalComponent,
+    mapaComponent
   ],
   imports: [
     BrowserModule,
