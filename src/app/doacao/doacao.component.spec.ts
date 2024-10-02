@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { principalComponent } from './principal.component';
+import { DoacaoComponent } from './doacao.component';
 
-describe( 'principalComponent', () => {
-  let component: principalComponent;
-  let fixture: ComponentFixture<principalComponent>;
+describe('DoacaoComponent', () => {
+  let component: DoacaoComponent;
+  let fixture: ComponentFixture<DoacaoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [principalComponent]
+      declarations: [DoacaoComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(principalComponent);
+    fixture = TestBed.createComponent(DoacaoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="text-center my-4">Sistema de Doação de Alimentos</h1>
+
+  <form (ngSubmit)="registrarAlimento()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome do Alimento</label>
+      <input type="text" [(ngModel)]="novoAlimento.nome" name="nome" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="quantidade" class="form-label">Quantidade</label>
+      <input type="number" [(ngModel)]="novoAlimento.quantidade" name="quantidade" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="dataValidade" class="form-label">Data de Validade</label>
+      <input type="date" [(ngModel)]="novoAlimento.dataValidade" name="dataValidade" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="descricao" class="form-label">Descrição</label>
+      <textarea [(ngModel)]="novoAlimento.descricao" name="descricao" required class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="doador" class="form-label">Nome do Doador</label>
+      <input type="text" [(ngModel)]="novoAlimento.doador" name="doador" required class="form-control">
+    </div>
+
+    <!-- Botão de Cadastrar -->
+    <button type="submit" routerlink="pos-registro" class="btn btn-primary">Cadastrar</button>
+  </form>
+
+
+  <!-- Lista de Empresas para Doação -->
+  <div class="mt-5">
+    <h2 class="text-center">Instituições e Empresas para Doação</h2>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let empresa of empresas">
+        <strong>{{ empresa.nome }}</strong> - {{ empresa.endereco }}
+      </li>
+    </ul>
+  </div>
+</div>

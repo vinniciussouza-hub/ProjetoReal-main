@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="text-center">Alimentos Registrados</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Data de Validade</th>
+        <th>Descrição</th>
+        <th>Doador</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alimento of alimentosRegistrados">
+        <td>{{ alimento.nome }}</td>
+        <td>{{ alimento.quantidade }}</td>
+        <td>{{ alimento.dataValidade }}</td>
+        <td>{{ alimento.descricao }}</td>
+        <td>{{ alimento.doador }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center mt-4">
+    <h3>Empresas para Doação</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let empresa of empresas">
+        <strong>{{ empresa.nome }}</strong> - {{ empresa.endereco }}
+      </li>
+    </ul>
+  </div>
+</div>
